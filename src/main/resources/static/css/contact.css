@@ -1,0 +1,177 @@
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-size: cover;
+        }
+
+        .form-wrapper {
+            position: relative;
+        }
+
+        .register-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+            width: 300px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .header h3 {
+            margin: 0;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .input-group textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .input-group i {
+            margin: 0;
+            padding: 10px;
+            border-right: 1px solid #ccc;
+            background-color: #f5f5f5;
+        }
+
+        .input-group input {
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        .register-container button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            color: rgb(19, 8, 8);
+            border: 1px solid black;
+            cursor: pointer;
+            margin-bottom: 10px;
+            background-color: transparent;
+        }
+
+        .register-container button i {
+            margin-right: 5px;
+        }
+
+        .close-button {
+            background-color: white;
+            border: 1px solid black;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: 2;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .overlay-content {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 3;
+            width: 300px;
+            max-width: 90%;
+        }
+
+        .overlay-message {
+            color: blue;
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid blue;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 10px auto; /* Center spinner horizontally */
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .blur {
+            filter: blur(5px);
+        }
+
+        .greeting-icons {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 4;
+        }
+
+        .greeting-icons i {
+            font-size: 30px;
+            margin: 0 10px;
+        }
+
+        .greeting-icons .fa-handshake {
+            color: #00f; /* Blue color */
+        }
+
+        .greeting-icons .fa-smile {
+            color: #f90; /* Orange color */
+        }
+
+        .greeting-icons .fa-heart {
+            color: #f00; /* Red color */
+        }

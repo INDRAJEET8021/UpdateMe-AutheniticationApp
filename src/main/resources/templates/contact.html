@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contact Page</title>
+    <link rel="icon" href="/images/contact.png" type="image/png">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="/css/contact.css"/>
+
+</head>
+<body>
+<div class="form-wrapper">
+    <div class="register-container" id="registerContainer">
+        <form th:action="@{/success}" method="post" id="contactForm">
+            <div class="header">
+                <div>
+                    <h3><i class="fas fa-paper-plane"></i> Send Us Message</h3>
+                </div>
+                <div>
+                    <button
+                            type="button"
+                            class="close-button"
+                            onclick="window.location.href='/success'"
+                    >
+                        <i class="fas fa-times"></i> Close
+                    </button>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" name="name" placeholder="Enter Name" required/>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" name="email" placeholder="Enter Email" required/>
+            </div>
+
+            <div class="input-group">
+                <i class="fas fa-phone"></i>
+                <input type="text" name="number" placeholder="Enter Phone No" required/>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-comment"></i>
+                <textarea name="message" placeholder="Enter Your Message" required></textarea>
+            </div>
+
+            <button type="submit"><i class="fas fa-paper-plane"></i> Submit</button>
+        </form>
+    </div>
+    <div class="overlay" id="overlay">
+        <div class="overlay-content">
+            <div class="overlay-message">Thanks for contacting us</div>
+            <div class="spinner"></div>
+            <div id="countdown">3</div>
+        </div>
+        <div class="greeting-icons">
+            <i class="fas fa-handshake"></i>
+            <i class="fas fa-smile"></i>
+            <i class="fas fa-heart"></i>
+        </div>
+    </div>
+</div>
+<script src="/js/contact.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('/images/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+.login-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5); /* Black shadow */
+    width: 300px;
+    position: relative;
+    z-index: 1; /* Ensure the login container is above the background image */
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+.header h3 {
+    margin: 0;
+}
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.input-group i {
+    margin: 0;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+    background-color: #f5f5f5;
+}
+.input-group input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background-color: #fff;
+}
+.input-group .toggle-password {
+    cursor: pointer;
+    margin-left: 10px;
+}
+.captcha-container {
+    margin-bottom: 15px;
+    text-align: center;
+}
+.remember-me {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 15px;
+}
+.remember-me input {
+    margin-right: 5px;
+}
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    color: rgb(19, 8, 8);
+    border: 1px solid black;
+    cursor: pointer;
+    margin-bottom: 10px;
+    background-color: transparent;
+}
+ .login-container button:hover{
+ background-color:rgb(246, 248, 249)}
+.login-container button i {
+    margin-right: 5px;
+}
+.register-button {
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 14px;
+}
+.error-message {
+    color: red;
+    margin-bottom: 10px;

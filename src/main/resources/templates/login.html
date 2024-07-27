@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="icon" href="/images/login.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/css/login.css"/>
+</head>
+<body>
+<div class="login-container">
+    <form th:action="@{/}" method="post">
+        <div class="header">
+            <div>
+                <h3><i class="fas fa-user"></i> Login</h3>
+            </div>
+            <div>
+                <button type="button" class="register-button" onclick="window.location.href='/register'">
+                    <i class="fas fa-user-plus"></i> Register
+                </button>
+            </div>
+        </div>
+        <div th:if="${message != null}" class="error-message" th:text="${message}"></div>
+        <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" name="email" placeholder="Enter Email" required>
+        </div>
+        <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="password" name="password" placeholder="Enter Password" required>
+            <i class="fas fa-eye toggle-password" onclick="togglePassword()"></i>
+        </div>
+        <div class="captcha-container">
+            <img th:src="'data:image/png;base64,' + ${captchaSettings.realCaptcha}" alt="Captcha Image" width="100%">
+        </div>
+        <div class="input-group">
+            <i class="fas fa-key"></i>
+            <input type="text" name="captcha" placeholder="Enter Captcha" required>
+        </div>
+        <div class="remember-me">
+            <input type="checkbox" id="rememberMe" name="rememberMe">
+            <label for="rememberMe">Remember Me</label>
+        </div>
+        <button type="submit">
+            <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+        <input type="hidden" th:field="*{captchaSettings.hiddenCaptcha}">
+    </form>
+</div>
+<script src="/js/login.js"></script>
+
+</body>
+</html>
