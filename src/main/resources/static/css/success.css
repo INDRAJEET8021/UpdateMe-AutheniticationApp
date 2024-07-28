@@ -200,7 +200,7 @@ background: linear-gradient(90deg, #505050 0%, #a4b3c2 100%);
 .sticky-heading {
     position: sticky;
     top: 70px;
-    background-color: white;
+    color:black;
     z-index: 1;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -255,6 +255,13 @@ background: linear-gradient(90deg, #505050 0%, #a4b3c2 100%);
         flex: 0 0 100%;
         max-width: 100%;
     }
+    .sticky-heading{
+        color: rgb(162, 10, 197);;
+        }
+
+       .navbar-toggler-icon{
+              color:white;
+              font-size:0.8rem}
 
     .contact-button {
         width: 50px;
@@ -271,11 +278,19 @@ background: linear-gradient(90deg, #505050 0%, #a4b3c2 100%);
 @media (max-width: 768px) {
     .news-card {
         flex-direction: column;
+        background-color:white;
     }
 
     .news-image {
         width: 100%;
         height: auto;
+    }
+     .navbar-toggler-icon{
+        color:white;
+        font-size:0.8rem}
+
+    .sticky-heading{
+    color: rgb(162, 10, 197);;
     }
 }
 
@@ -284,6 +299,12 @@ background: linear-gradient(90deg, #505050 0%, #a4b3c2 100%);
     .navbar-custom .navbar-nav .nav-link {
         font-size: 14px;
     }
+    .navbar-toggler-icon{
+    color:white;
+    font-size:0.7rem}
+    .sticky-heading{
+        color: rgb(162, 10, 197);;
+        }
 
     .user-info {
         font-size: 14px;
