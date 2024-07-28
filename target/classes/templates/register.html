@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="icon" href="/images/register.png" type="image/png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/css/register.css"/>
+
+</head>
+<body>
+<div class="register-container">
+    <form th:action="@{/register}" method="post">
+        <div class="header">
+            <div>
+                <h3><i class="fas fa-user-plus"></i> Register</h3>
+            </div>
+            <div>
+                <button type="button" class="login-button" onclick="window.location.href='/'">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </button>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" name="name" placeholder="Enter Name" required>
+        </div>
+        <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" name="email" placeholder="Enter Email" required>
+        </div>
+        <div class="input-group">
+            <i class="fas fa-home"></i>
+            <input type="text" name="address" placeholder="Enter Address" required>
+        </div>
+        <div class="input-group">
+            <i class="fas fa-phone"></i>
+            <input type="text" name="number" placeholder="Enter Phone No" required>
+        </div>
+        <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" name="password" placeholder="Enter Password" required>
+        </div>
+        <button type="submit">
+            <i class="fas fa-user-plus"></i> Register
+        </button>
+    </form>
+    <div th:if="${success}" class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Registered Successfully! Please Login.</strong>
+    </div>
+</div>
+</body>
+</html>

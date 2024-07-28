@@ -1,0 +1,68 @@
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .about-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .about-content {
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6); /* Enhanced shadow */
+            text-align: left;
+            width: 500px; /* Fixed width */
+            min-height: 300px; /* Minimum height to ensure content fits */
+            border-radius: 12px; /* Slightly more rounded corners */
+            position: relative;
+            overflow: hidden;
+            box-sizing: border-box;
+            font-size: 1rem;
+            line-height: 1.8;
+            font-family: 'Roboto', sans-serif; /* Applied Google Font */
+        }
+
+        .about-content h2 {
+            margin-bottom: 20px;
+            font-size: 26px;
+            text-align: center; /* Centered heading */
+            color: #333;
+            text-decoration: underline; /* Underlined heading */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Shadow effect on heading */
+        }
+
+        #about-text {
+            white-space: pre-wrap;
+            margin: 0;
+            position: relative;
+        }
+
+        .close-icon {
+            font-size: 24px;
+            position: absolute;
+            top: 10px; /* Adjust to align with text */
+            right: 10px; /* Position to the right */
+            cursor: pointer; /* Indicate clickable element */
+            color: #000; /* Ensure visibility */
+            border: 2px solid #000; /* Add border */
+            border-radius: 0; /* Square corners */
+            padding: 5px; /* Padding to make border visible */
+            background-color: #fff; /* Background to make border stand out */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect on button */
+        }
+
+        .close-icon:hover {
+            color: #ff0000; /* Change color on hover for better UX */
+            border-color: #ff0000; /* Change border color on hover */
+        }

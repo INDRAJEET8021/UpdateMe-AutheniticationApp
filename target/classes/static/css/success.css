@@ -1,0 +1,300 @@
+#weather-temp{
+    font-size: 1.7rem;
+    font-color:black;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    padding-top: 70px;
+}
+
+.navbar-custom {
+
+    background: linear-gradient(90deg, #1a1a1a 0%, #2c3e50 100%);
+    box-shadow: 0 5px 9px rgba(12, 12, 12, 0.3);
+    padding: 1rem 4.4rem;
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.user-icon {
+    font-size: 24px;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.user-info {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.dropdown-item {
+    color: #fff;
+}
+
+.logout-btn {
+    color: rgb(8, 9, 9);
+    background-color: rgba(15, 121, 213, 0.713);
+    border: none;
+    cursor: pointer;
+}
+
+.widget {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.weather-widget {
+    background: #d1d8e0; /* Cloudy background color */
+    background: linear-gradient(-45deg, #321a95fe 0%, #c28c8c 100%);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin: 20px auto;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+}
+
+.weather-info .fa-location-pin,
+.weather-info .fa-thermometer-half,
+.weather-info .fa-tachometer-alt,
+.weather-info .fa-water {
+    font-size: 24px;
+    color: #422e3fd6;
+}
+
+.weather-info div {
+    margin-bottom: 10px;
+}
+
+.weather-info .temperature {
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+}
+
+.weather-info .condition {
+    font-size: 20px;
+    color: #666;
+}
+
+.weather-widget, .market-update {
+    margin-bottom: 15px;
+}
+.market-update{
+background: linear-gradient(90deg, #505050 0%, #a4b3c2 100%);
+}
+
+.weather-widget h5, .market-update h5 {
+    margin-bottom: 15px;
+}
+
+.market-ticker, .weather-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.market-ticker-item, .weather-info div {
+    margin-bottom: 10px;
+}
+
+.news-section {
+    margin-top: 30px;
+    position: relative;
+}
+
+.news-card {
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.news-image-container {
+    flex-shrink: 0;
+}
+
+.news-image {
+    width: 150px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 15px;
+    flex: 1;
+}
+
+.news-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.news-description {
+    margin: 10px 0;
+}
+
+.news-card.no-image .news-image-container {
+    display: none;
+}
+
+.row-custom {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-custom {
+    flex: 1;
+    margin: 10px;
+}
+
+.col-weather-market {
+    flex: 0 0 25%;
+    max-width: 25%;
+    position: sticky;
+    top: 70px;
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+}
+
+.weather-details {
+    font-size: 18px;
+    color: #13170c;
+}
+
+.weather-details .data {
+    font-weight: 400;
+}
+
+.weather-details .text {
+    font-weight: 400;
+}
+
+.col-news {
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+
+.sticky-heading {
+    position: sticky;
+    top: 70px;
+    background-color: white;
+    z-index: 1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.contact-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1a5dbb;
+    color: rgb(249, 249, 249);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+    color: #ccc;
+}
+
+.contact-button:hover::after {
+    content: 'Contact Me!';
+    position: absolute;
+    right: 60px;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    background-color: #909ca8;
+    color: #1a5dbb;
+    font-weight: 1000;
+    padding: 0.5rem;
+    white-space: nowrap;
+    border-radius: 15%;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .col-weather-market, .col-news {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 992px) {
+    .col-weather-market, .col-news {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .contact-button {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .contact-button:hover::after {
+        right: 50px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .news-card {
+        flex-direction: column;
+    }
+
+    .news-image {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-custom .navbar-brand,
+    .navbar-custom .navbar-nav .nav-link {
+        font-size: 14px;
+    }
+
+    .user-info {
+        font-size: 14px;
+    }
+
+    .weather-info .temperature {
+        font-size: 30px;
+    }
+
+    .weather-info .condition {
+        font-size: 16px;
+    }
+}
+

@@ -1,0 +1,12 @@
+com\captcha\login\LoginApplication.class
+com\captcha\login\services\UserService.class
+com\captcha\login\repository\UserRepository.class
+com\captcha\login\services\UserDetailsService.class
+com\captcha\login\config\SecurityConfig.class
+com\captcha\login\models\LoginDto.class
+com\captcha\login\controllers\userController.class
+com\captcha\login\models\CaptchaSettings.class
+com\captcha\login\models\User.class
+com\captcha\login\controllers\FormController.class
+com\captcha\login\models\UserDto.class
+com\captcha\login\services\CaptchaGenerator.class

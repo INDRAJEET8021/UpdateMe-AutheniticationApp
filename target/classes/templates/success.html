@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Room</title>
+    <link rel="icon" href="/images/homepage.png" type="image/png">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/css/success.css"/>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <a class="navbar-brand" href="#">Brand</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+            </li>
+
+        </ul>
+        <div class="d-flex align-items-center">
+            <i class="fa-solid fa-user user-icon"></i>
+            <div class="dropdown">
+                <span class="user-info dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span th:text="${username.split(' ')[0]}"></span>
+                </span>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <button class="dropdown-item logout-btn" onclick="confirmLogout()">Logout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-3 col-weather-market">
+            <div class="widget weather-widget">
+                <h5>Weather Update</h5>
+                <div class="weather-info">
+                    <div><i class="fa-solid fa-location-pin"></i> <span id="weather-location">Loading...</span></div>
+                    <div> <span id="weather-temp">Loading...</span></div>
+                    <div><strong>Condition:</strong> <span id="weather-condition">Loading...</span></div>
+                </div>
+                <div class="weather-details">
+                    <div><i class="fa-solid fa-tachometer-alt"></i> <span id="weather-wind">Loading...</span> km/h</div>
+                    <div><i class="fa-solid fa-water"></i> <span id="weather-humidity">Loading...</span>%</div>
+                </div>
+            </div>
+            <div class="widget market-update">
+                <h5>Market Updates</h5>
+                <div class="market-ticker" id="market-ticker">
+                    <div class="market-ticker-item">Nifty: +0.45% - 18,123.45</div>
+                    <div class="market-ticker-item">BankNifty: +0.78% - 43,456.78</div>
+                    <div class="market-ticker-item">NASDAQ: -0.23% - 14,567.89</div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9 col-news">
+            <div class="news-section">
+                <h2 class="sticky-heading">News Headlines</h2>
+                <div th:if="${newsData}">
+                    <div th:each="article : ${newsData}">
+                        <div class="news-card" th:classappend="${article['urlToImage'] == null ? ' no-image' : ''}">
+                            <div class="news-image-container">
+                                <img class="news-image" th:if="${article['urlToImage'] != null}" th:src="${article['urlToImage']}" alt="News Image">
+                            </div>
+                            <div class="news-content">
+                                <div class="news-title" th:text="${article['title']}">Title</div>
+                                <div class="news-description" th:text="${article['description']}">Description</div>
+                                <a th:href="${article['url']}" class="btn btn-primary" target="_blank">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div th:if="${newsData == null}">
+                    <p>No news available at the moment.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a href="/contact" class="contact-button"><i class="fa-solid fa-envelope"></i></a>
+
+
+<form id="logoutForm" action="/logout" method="post" style="display: none;">
+</form>
+
+<script src="/js/success.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+
+</script>
+</body>
+</html>
